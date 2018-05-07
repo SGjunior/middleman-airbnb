@@ -1,0 +1,130 @@
+<!-- source/flats/show.html.erb -->
+<div class="container-banner">
+  <div class="row">
+    <div class="banner banner-small" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 10%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city %>');">
+    </div>
+  </div>
+</div>
+<div class="header-flat">
+  <div class="header-flat-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="header-flat-details">
+          <div class="header-flat-owner text-center">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{flat.username}", class:"img-circle", width:"80" %>
+
+            <p><%= flat.owner %></p>
+          </div>
+          <div class="header-flat-name">
+            <h1><%= flat.name %></h1>
+            <p><%= "#{flat.city.capitalize}, #{flat.country.capitalize}" %></p>
+            <div class="rating">
+              <% flat.rating.times { %> <i class="fa fa-star" style="color: #ffb400"></i> <% } %>
+              <% (5 - flat.rating).times { %> <i class="fa fa-star" style="color: #918f8a"></i> <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5">
+        <form action="#">
+          <h4>Book this flat!</h4>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <div class='input-group date' id='checkin'>
+                  <input type="text" class="form-control" placeholder="checkin" id="checkin_value" name="checkout">
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="form-group">
+                <div class='input-group date' id='checkout'>
+                  <input type="text" class="form-control" placeholder="checkout" id="checkout" name="checkout">
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <select name="" id="guests" class="form-control">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-danger form-control" value="Book it">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flat-description shadow">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>About this flat</h2>
+        <p><small><%= flat.desc %></small></p>
+        <hr>
+        <div class="flat-data">
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <strong>The space</strong>
+            </div>
+            <div class="col-xs-9 col-sm-3">
+              <ul class="list-unstyled">
+                <li>Accommodates:</li>
+                <li>Bathrooms:</li>
+                <li>Bed type:</li>
+                <li>Bedrooms:</li>
+              </ul>
+            </div>
+            <div class="col-xs-3 col-sm-1">
+              <ul class="list-unstyled text-center">
+                <li><strong><%= flat.accommodates %></strong></li>
+                <li><strong><%= flat.bathrooms %></strong></li>
+                <li><strong><%= flat.bed_type %></strong></li>
+                <li><strong><%= flat.bedrooms %></strong></li>
+              </ul>
+            </div>
+            <div class="col-xs-9 col-sm-3">
+              <ul class="list-unstyled">
+                <li>Beds:</li>
+                <li>Property type: </li>
+              </ul>
+            </div>
+            <div class="col-xs-3 col-sm-1">
+              <ul class="list-unstyled text-center">
+              <li><strong><%= flat.beds %></strong></li>
+              <li><strong><%= 2 %></strong></li>
+            </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <strong>The ameneties</strong>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <ul class="list-unstyled ameneties">
+                <%= "<li><i class='fas fa-wifi'></i>- Wifi</li>" if flat.wifi %>
+                <%= "<li><i class='fas fa-utensils'></i>- Kitchen</li>" if flat.kitchen %>
+                <%= "<li><i class='fas fa-tv'></i>- TV</li>" if flat.tv %>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <ul class="list-unstyled ameneties">
+              <%= "<li><i class='fas fa-glass-martini'></i>- Bar</li>" if flat.wifi %>
+              <%= "<li><i class='fas fa-exclamation-circle'></i>- Concierge</li>" if flat.wifi %>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,13 +4,35 @@
   country: 'France'
   desc: 'Charming room in MontMartre'
   rating: 4
+  wifi: true
+  username: 'ssaunier'
+  owner: 'Sebastien Saunier'
+  accommodates: 5
+  bathrooms: 1
+  bed_type: 'Queen'
+  bedrooms: 3
+  beds: 3
+  prop_type: 'bungalo'
+  kitchen: true
+  tv: true
 
 - id: 2
   name: "Simon's home"
   city: 'montreal'
   country: 'Canada'
   desc: 'Charming in the heart of the plateau'
-  rating: 4.5
+  rating: 5
+  username: 'sgjunior'
+  owner: 'Simon Guertin'
+  accommodates: 2
+  bathrooms: 2
+  bed_type: 'queen'
+  bedrooms: 1
+  beds: 1
+  prop_type: 'bungalo'
+  kitchen: false
+  tv: true
+  wifi: true
 
 - id: 3
   name: "Romain's home"
@@ -18,4 +40,14 @@
   country: 'UK'
   desc: 'Nice flat in piccadilly'
   rating: 3
-
+  wifi: true
+  username: 'michaellepecq'
+  owner: 'Michael Lepecq'
+  accommodates: 1
+  bathrooms: 1
+  bed_type: 'single'
+  bedrooms: 1
+  beds: 6
+  prop_type: 'castle'
+  kitchen: true
+  tv: true
