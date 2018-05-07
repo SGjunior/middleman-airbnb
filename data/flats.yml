@@ -1,0 +1,21 @@
+- id: 1
+  name: "Sebastien's home"
+  city: 'paris'
+  country: 'France'
+  desc: 'Charming room in MontMartre'
+  rating: 4
+
+- id: 2
+  name: "Simon's home"
+  city: 'montreal'
+  country: 'Canada'
+  desc: 'Charming in the heart of the plateau'
+  rating: 4.5
+
+- id: 3
+  name: "Romain's home"
+  city: 'london'
+  country: 'UK'
+  desc: 'Nice flat in piccadilly'
+  rating: 3
+
